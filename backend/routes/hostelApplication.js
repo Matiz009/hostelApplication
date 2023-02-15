@@ -1,9 +1,9 @@
 var express = require("express");
+const createApplication = require("../controllers/hostelApplication.js");
+const getApplications = require("../controllers/hostelApplication.js");
 var router = express.Router();
 
-router.get("/", function (req, res) {});
-router.post("/", function (req, res) {});
-router.put("/", function (req, res) {});
-router.delete("/", function (req, res) {});
+router.get("/", getApplications);
+router.post("/", createApplication);
 
 module.exports = router;
