@@ -2,7 +2,7 @@ const hostelApplicationModel = require("../models/hostelApplication.js");
 const getApplications = async (req, res) => {
   try {
     const data = await hostelApplicationModel.find();
-    res.json(data);
+    return res.send(data);
   } catch (err) {
     console.log(err);
   }
