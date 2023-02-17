@@ -23,14 +23,14 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/hostelApplicants", hostelApplication);
-
+app.use("/viewApplicants", hostelApplication);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb://localhost:27017/hostelApplication", {
+  .connect("mongodb://127.0.0.1:27017/hostelApplication", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
